@@ -1,0 +1,38 @@
+*{
+    text-align: center;
+}
+html{
+    background-color: #ffe2a8;
+    font-size: 16px;
+}
+body{
+    width: 640px;
+    margin: auto; /* 너비에서 남는 여백을 동일하게 분배 */
+}
+h1{
+    font-size: 60px;
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 25px 0px 25px 0px;
+}
+h2{
+    font-size: 35px;
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 15px 0px 15px 0px;
+}
+img{
+    width: 180px;
+    border-radius: 20px;
+    border: dashed 2px #252525;
+    padding: 2px;
+}
+p{
+    font-size: 1rem;
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
