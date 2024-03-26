@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 더 알아보기</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+        */
+        [width $= "0"]{
+            border: 5px solid black;
+        }
+
+        /* 
+        자식 요소 선택자
+        p em 은 p 밑에 있는 em 다 / p > em 은 p 한단계 하위 em */
+        p > em {
+            color: blue;
+        }
+
+        /* 
+        인접 형제 선택자
+        id가 sam인 요소 바로 뒤에 있는 p */
+        #sam + p{ 
+            color: orange;
+        }
+
+        /*
+        전체 형제 요소 선택자
+        !유의! : 뒤이어 등장하는 형제들을 대상으로 함
+        */
+        #sam ~ img{ 
+            display: none;
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="../01/images/daejeon.jpg" width="120" alt="대전">
+    <img src="../01/images/daejeon.jpg" width="120">
+    <img src="../01/images/daejeon.jpg" width="120" id="sam">
+    <p>대전은 우리 언니가 살고있는 지역</p>
+    <p>대전광역시 유성구에는 대전의 랜드마크 한빛탑이 있습니다.</p>
+    <p>한빛탑 맞은 편에는 <em>엑스포다리</em>가 놓여 있습니다.</p>
+    <p>엑스포다리 아래에는 대전 3대하천 중 하나인 갑천이 흐릅니다.</p>
+</body>
+</html>
