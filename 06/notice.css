@@ -19,7 +19,7 @@
     /*썸네일을 div로 지정해놨기때문에 div가 너비에 맞춰서 움직일 수 있어서 최소치정함*/
     min-width: 6.75rem;
     min-height: 6.75rem;
-    background-color: #8e694b;
+    background-color: #2f883b;
 }
 .notice_content{
     margin-left: 1rem;

@@ -16,7 +16,7 @@ header.header{
     justify-content: space-between;
 }
 .header-content_logo{
-    color: #8e694b;
+    color: #2f883b;
     font-size: 2rem;
     font-weight: 900;
 
@@ -38,10 +38,11 @@ header.header{
     display: inline-block;
     margin-right: 30px;
     font-size: 1.13rem;
-    font-weight: 900;
+    font-weight: 600;
+    color: #3b3b3b;
 }
 .header-content_nav ul li.active{
-    color:#8e694b;
+    color:#2f883b;
 }
 .header-content_input{
     justify-content: center;
@@ -62,6 +63,7 @@ header.header{
     padding: 0.5rem 1rem;
     background-color: #ffffff;
     border: 0.5px solid #c5c6c9;
+    border-radius: 0.2rem;
     font-weight: 600;
 }
 .header-content_input .icon input{
