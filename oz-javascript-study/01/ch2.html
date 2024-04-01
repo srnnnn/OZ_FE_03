@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>과제 1</title>
+</head>
+<body>
+    <h1 class="name"></h1>
+    <p class="pet"></p>
+    <p id="fruit"></p>
+    <script>
+        document.querySelector(".name").textContent = prompt("당신의 이름은 무엇인가요?");
+        document.querySelector(".pet").textContent = `제가 좋아하는 동물은 ${prompt('좋아하는 동물은 무엇인가요?')} 입니다.`;
+        document.querySelector("#fruit").textContent = `제가 좋아하는 과일은 ${prompt('좋아하는 과일은 무엇인가요?')} 입니다`;
+    </script>
+</body>
+</html>
