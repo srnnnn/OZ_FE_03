@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>createElement & appendChild</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+
+        for(let i=0;i<5;i++){
+            const div=document.getElementById("container");
+            const box=document.createElement("div");
+            box.style.color = "blue";
+            box.style.backgroundColor="beige";
+            box.style.width = "200px";
+            box.style.height = "200px";
+            box.textContent = "신기하고 재밌다";
+            div.appendChild(box);
+            // div.append("append추가");
+        }
+
+    </script>
+    
+</body>
+</html>

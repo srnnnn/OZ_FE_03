@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 메소드 및 속성</title>
+</head>
+<body>
+
+    <h1 id="song-title" class="heading text" title="다비치 노래">
+        <span>거북이</span>
+    </h1>
+    <p class="lyrics">
+        마음을 둘 곳도 없고 더 갈 곳도 없는 슬픈 거북이 한 마리
+    </p>
+    <p class="lyrics">
+        상처가 많아 너 혼자서 매일 외롭게 숨는 거니
+    </p>
+    <script>
+        console.log(document.querySelectorAll(".lyrics"));
+        console.log(document.getElementsByClassName("lyrics"));
+        const title=document.getElementById("song-title");
+        console.log(title);
+
+        console.log(title.textContent); //코드상에 공백도 가져옴
+        console.log(title.innerText); //텍스트만
+        console.log(title.className);
+        console.log(title.style); //정의된 스타일 가져옴
+        console.log(title.title); 
+    </script>
+</body>
+</html>
