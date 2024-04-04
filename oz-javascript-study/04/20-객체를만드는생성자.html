@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를 만드는 생성자</title>
+</head>
+<body>
+    <script>
+        //함수인데, 객체를 생성할 목적으로 정의하는 함수 / 설게도
+        //자바스크립트에서 기본으로 제공하지 않는 데이터 유형을 직접만들 수 있음
+        function BestSinger(){
+            this.name="부석순";
+            this.member="승관, 도겸, 호시";
+            this.singing=function(){
+               console.log("파이팅 해야지 파이팅 해야지"); 
+            }
+        }
+
+        const bbs=new BestSinger();
+        console.log(bbs.name);
+        bbs.singing();
+
+
+        function Singer(name, member){
+            this.name=name;
+            this.member=member;
+        }
+        const newjeans=new Singer("뉴진스","민지, 해린, 혜인, 다니엘, 하니");
+        console.log(newjeans.name);
+        console.log(newjeans.member);
+    </script>
+</body>
+</html>
