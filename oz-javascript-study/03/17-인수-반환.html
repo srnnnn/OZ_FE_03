@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>인수 & 반환</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        console.log(createParagraph("안녕","red"));
+        console.log(createParagraph("한번쯤은","green"));
+        console.log(createParagraph("날들어봤겠지","blue"));
+        console.log(createParagraph("너의사랑니","tomato"));
+        function createParagraph(content, color){
+            const p = document.createElement("p");
+            p.style.color=color
+            p.textContent=content;
+            document.querySelector("#container").append(p);
+
+            return `방금 만든 태그의 콘텐츠 : ${content}, 색상 : ${color}`;
+        }
+    </script>
+</body>
+</html>
