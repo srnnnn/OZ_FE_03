@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+
+    <script>
+        const bss=["승관","호시","도겸"];
+        //push : 배열에 주어진 요소 추가
+        bss.push("이영지")
+        console.log(bss)
+
+        //pop : 배열의 끝부분부터 요소 빼기
+        bss.pop();
+        console.log(bss)
+
+        //indexOf : 주어진 요소의 유무를 인덱스 번호로 확인
+        console.log(bss.indexOf("승관"));
+
+        //splice : 정해진 위치에서부터 정해진 개수만큼 요소 제거
+        bss.splice(0,3, "부승관","권호시","이도겸");
+        console.log(bss)
+        
+        //forEach : 배열의 개별 요소에 대한 함수를 차례대로 호출
+        bss.forEach(function(item){
+            console.log("forEach에서 호출된 함수 " +item)
+        });
+    </script>
+</body>
+</html>
