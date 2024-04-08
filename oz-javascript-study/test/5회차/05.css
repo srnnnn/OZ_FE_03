@@ -39,19 +39,28 @@ body {
     cursor: pointer;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   
   #todo-list li:last-child {
     border-bottom: none;
   }
+
   
-  .delete-btn {
-    float: right;
-    background-color: red;
+.delete-btn { 
+    /* float: right; */
+    background-color: rgb(112, 112, 112);
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 50%;
     cursor: pointer;
+  }
+  .checkbox{
+    margin-right: 0.1rem;
+    
   }
   

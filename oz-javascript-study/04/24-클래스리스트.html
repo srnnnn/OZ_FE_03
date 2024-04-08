@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 리스트</title>
+    <style>
+        .pretty{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <img src="/oz-htmlcss-study/01/images/jigu.jpeg" alt="치즈고양이 지구">
+    <br>
+    <button id="add">ADD STYLE</button>
+    <button id="remove">REMOVE STYLE</button>
+    <button id="toggle">TOGGLE STYLE</button>
+
+    <script>
+        const img=document.querySelector("img");
+        const addBtn = document.querySelector("#add")
+        const removeBtn = document.getElementById("remove");
+        const toggleBtn = document.getElementById("toggle");
+
+        console.log(img.classList)
+        addBtn.addEventListener("click",function(){
+            img.classList.add("pretty");
+            console.log(img.classList.contains("pretty")); //인수가 있는지 없는지 확인함
+        });
+        removeBtn.addEventListener("click",function(){
+            img.classList.remove("pretty");
+            console.log(img.classList.contains("pretty")); //인수가 있는지 없는지 확인함
+        });
+        toggleBtn.addEventListener("click",function(){
+            //toggle은 있으면 제거하고 없으면 추가해라 (on, off 중 하나로 바꿈)
+            img.classList.toggle("pretty");   
+
+            console.log(img.classList.contains("pretty")); //인수가 있는지 없는지 확인함
+        })
+    </script>
+</body>
+</html>

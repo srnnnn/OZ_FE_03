@@ -3,8 +3,6 @@ document.getElementById('add-btn').addEventListener('click', function () {
     // 1. index.html에 있는 input 요소에 입력된 값(value)과 button 요소를 변수에 할당합니다.
     const inputValue=document.getElementById("todo-input").value;
     const buttonValue=document.getElementById("add-btn").innerText;
-    console.log(inputValue)
-    console.log(buttonValue)
 
     // 5. 만약 입력창에 아무것도 입력하지 않은 경우 alert로 유저에게 입력을 요청해야 합니다.
     if(inputValue === ''){
@@ -13,14 +11,15 @@ document.getElementById('add-btn').addEventListener('click', function () {
         // 2. 새로운 li요소를 만들고 input 요소에 입력된 값을 textContent로 갖도록 합니다.
         const li=document.createElement("li");
         li.textContent=inputValue;
+
+        const checkbox = document.createElement("input");
+        checkbox.type="checkbox"
+        checkbox.classList.add("checkbox");
+        li.append(checkbox);
+
         const deleteBtn=document.createElement("button");
+        deleteBtn.classList.add("delete-btn");
         deleteBtn.textContent="삭제";
-        deleteBtn.style.backgroundColor="gray";
-        deleteBtn.style.color="white";
-        deleteBtn.style.border="none";
-        deleteBtn.style.borderRadius="4px"
-        deleteBtn.style.marginLeft="10px"
-        deleteBtn.style.padding="5px 10px";
         li.append(deleteBtn);
         document.getElementById("todo-list").append(li);
 
