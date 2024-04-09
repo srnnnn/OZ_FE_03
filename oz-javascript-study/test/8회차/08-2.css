@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    display: flex;
+}
+form{
+    border: 1px #cdcdcd solid;
+    border-radius: 8px;
+    padding: 20px;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    margin: 30px;
+}
+#container{
+    width: 700px;
+    margin: auto;
+}
+fieldset{
+    margin-bottom: 20px;
+}
+fieldset legend{
+    font-size: 20px;
+}
+label{
+    width: 20%;
+}
+.info1, .info2, .info3, .info4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0 ;
+}
+input[name="name"],input[name="id"],input[name*="pwd"],input[name="address"]{
+    height: 35px;
+    flex-grow: 1;
+}
+input[name*="idnumber"], input[name*="email"], .info2 select{
+    flex-grow: 2;
+    height: 35px;
+}
+input[name="gender"], input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+input[type="submit"]{
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e9245;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 18px 0 5px 0;
+}
+.info1 p, .info2 p{
+    flex-basis: 40px;
+    text-align: center;
+    margin: 0;
+}
+.info3 p, .info4 p{
+    margin: 0 80px 0 15px;
+}
+

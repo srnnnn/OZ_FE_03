@@ -29,10 +29,10 @@ form.addEventListener("submit",function(event){
 
     //환영 인사
     document.body.innerHTML="";
-    document.write(`<p>${userId} 님 환영합니다.</p>`);
-    document.write("회원 가입 시 입력하신 내역은 다음과 같습니다.");
-    document.write(`<p><strong>아이디</strong> : ${userId}</p>`);
-    document.write(`<p><strong>이름</strong> : ${userName}</p>`);
-    document.write(`<p><strong>전화번호</strong> : ${userPhone}</p>`);
-    document.write(`<p><strong>원하는 직무</strong> : ${userPosition}</p>`);
+    document.write(`<p><strong> ${userId}</strong> 님 환영합니다</p>`);
+    document.write('회원 가입 시 입력하신 내역은 다음과 같습니다.');
+    document.write(`<p>아이디 : <strong>${userId}</strong></p>`);
+    document.write(`<p>이름 : <strong>${userName}</strong> </p>`);
+    document.write(`<p>전화번호 : <strong>${userPhone}</strong></p>`);
+    document.write(`<p>원하는 직무: <strong>${userPosition}</strong></p>`);
 });
