@@ -81,7 +81,6 @@ form.addEventListener('submit', function (event) {
         return;
     }
 
-    
     const result = getUserInfo(
         userName, userSsnF, userSsnB, userId, userPwd1, 
         userEmailF,userEmailB,userAddreess,userGender,userAgree);
