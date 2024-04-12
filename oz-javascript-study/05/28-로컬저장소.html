@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬 저장소</title>
+</head>
+<body>
+    <p id="item">이봉주</p>
+    <button id="set">SET</button>
+    <button id="get">GET</button>
+    <button id="remove">remove</button>
+    <button id="clear">clear</button>
+
+    <script>
+        const item = document.getElementById("item");
+        document.getElementById("set").addEventListener("click",function(){
+            window.localStorage.setItem("마라토너",item.textContent); //키 밸류 저장
+        });
+
+        document.getElementById("get").addEventListener("click",function(){
+            alert(localStorage.getItem("마라토너")); //저장된 키로 밸류 값 불러옴
+        });
+
+        document.getElementById("remove").addEventListener("click",function(){
+            localStorage.removeItem("마라토너"); //해당 키와 밸류의 값을 없앰 , 그리고 가져오면 null
+        });
+
+        document.getElementById("clear").addEventListener("click",function(){
+            localStorage.clear(); //있는 거 싹 지움
+        });
+
+        // localStorage.setItem("커피",{ //문자열이 아닌 객체리터럴로 하면 저장은 되지만 object object로 들어감(저장하는의미없음)
+        //     name : "에티오피아",
+        //     taster : "산미"
+        // })
+
+        localStorage.setItem("커피", JSON.stringify({ 
+            name : "에티오피아",
+            taster : "산미"
+        }))
+
+    </script>
+</body>
+</html>
