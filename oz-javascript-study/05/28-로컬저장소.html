@@ -30,13 +30,15 @@
         document.getElementById("clear").addEventListener("click",function(){
             localStorage.clear(); //있는 거 싹 지움
         });
+      
 
+        
         // localStorage.setItem("커피",{ //문자열이 아닌 객체리터럴로 하면 저장은 되지만 object object로 들어감(저장하는의미없음)
         //     name : "에티오피아",
         //     taster : "산미"
         // })
 
-        localStorage.setItem("커피", JSON.stringify({ 
+        localStorage.setItem("커피", JSON.stringify({ //그래서 객체를 문자열로 바꿔주는 json방식으로는 가능
             name : "에티오피아",
             taster : "산미"
         }))
