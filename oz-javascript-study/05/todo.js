@@ -52,8 +52,8 @@ function displayTodos(){
         const todoDelBtn = document.createElement('span');
         todoDelBtn.textContent = 'x';
         todoItem.textContent = aTodo.todoText;
-        todoItem.title = '클릭하면 완료됨';
-        todoDelBtn.title = '클릭하면 삭제됨';
+        todoItem.title = '클릭하면 완료';
+        todoDelBtn.title = '클릭하면 삭제';
 
         if(aTodo.todoDone){
             todoItem.classList.add('done');
