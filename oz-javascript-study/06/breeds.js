@@ -94,6 +94,7 @@ tothetop.addEventListener("click",function(){
 
 resetBtn.addEventListener("click",function(){
     main.innerHTML = ''; 
+    select.value = '';
     currentDogs.splice(0, currentDogs.length);
 
     request1.removeEventListener("load", req1AddEvent); // 이전에 등록된 load 이벤트 리스너 제거
