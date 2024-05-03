@@ -1,4 +1,4 @@
-const welcome = (data)=>{
+const welcome = (data) => {
     return `
     <!DOCTYPE html>
     <html>
@@ -12,4 +12,4 @@ const welcome = (data)=>{
     `
 }
 
-module.exports=welcome;
+module.exports = welcome;
