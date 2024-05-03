@@ -14,7 +14,12 @@ const userSchema = mongoose.Schema({
         type : String,
         unique : true,
         sparse : true  //에러방지.. (이메일 로그인하면 구글아이디에는 null값이 들어감 후에 구글로 로그인하면 구글아이디가 들어가고 다시 이메일로그인하면 구글은 null값을가지면서 에러가 발생...?ㅜ)
-    }
+    },
+    kakaoId : {
+        type : String,
+        unique : true,
+        sparse : true 
+    },
 })
 
 const saltRounds = 10;

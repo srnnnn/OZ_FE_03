@@ -2,6 +2,7 @@ const passport = require('passport');
 const User = require('../models/users.model');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const KakaoStrategy = require('passport-kakao').Strategy;
 
 // req.login(user)
 passport.serializeUser((user, done)=>{
@@ -50,19 +51,20 @@ const googleStrategyConfig = new GoogleStrategy({
     scope:['email','profile']
 }, async (accessToken, refreshToken, profile, done) => {
     try {
-        const existingUser = await User.findOne({ googleId: profile.id }, (err, existingUser));
-    
+        const existingUser = await User.findOne({ googleId : profile.id });
         if (existingUser) {
             return done(null, existingUser);
         } else {
             const user = new User();
             user.email = profile.emails[0].value;
             user.googleId = profile.id;
-            user.save((err) => {
-                console.log(err);
-                if (err) { return done(err); }
-                done(null, user);
+            user.save()
+            .then(savedUser => {
+                done(null, savedUser);
             })
+            .catch(error => {
+                done(error);
+            });
         }
          
     } catch (error) {
@@ -71,6 +73,36 @@ const googleStrategyConfig = new GoogleStrategy({
 })
 
 passport.use('google', googleStrategyConfig);
+
+
+const kakaoStrategyConfig = new KakaoStrategy({
+    clientID: process.env.KAKAO_CLIENT_ID,
+    callbackURL: '/auth/kakao/callback',
+}, async (accessToken, refreshToken, profile, done) => {
+    try {
+        const existingUser = await User.findOne({ kakaoId: profile.id }) 
+
+        if (existingUser) {
+            return done(null, existingUser);
+        } else {
+            const user = new User();
+            console.log(user);
+            user.kakaoId = profile.id;
+            user.email = profile._json.kakao_account.email;
+            user.save()
+            .then(savedUser => {
+                done(null, savedUser);
+            })
+            .catch(error => {
+                done(error);
+            });
+        }
+    } catch (error) {
+        return done(err);
+    }
+})
+
+passport.use('kakao', kakaoStrategyConfig);
 
 
 
