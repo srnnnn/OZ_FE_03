@@ -25,6 +25,7 @@ const App = () => {
   }
 
   const handleAmount = (e) =>{
+    console.log(e.target.valueAsNumber)
     setamount(e.target.valueAsNumber)
   }
 
@@ -106,7 +107,7 @@ const App = () => {
               <span>
                 {expenses.reduce((acc,curr)=>{
                   return (acc += curr.amount)
-                },0)}원
+                },0).toLocaleString()}원
               </span>
             </p> 
           </div>
