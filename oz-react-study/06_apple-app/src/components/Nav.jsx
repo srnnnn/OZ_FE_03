@@ -1,9 +1,28 @@
 import {styled} from "styled-components"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Nav = () => {
+
+  const [show, setShow] = useState("false");
+
+  const listener = () => {
+    if(window.scrollY > 50){
+        setShow("true");
+    }else{
+        setShow("false");
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll',listener);
+    return () => {
+      window.removeEventListener('scroll',listener);
+    }
+  }, [])
+  
+
   return (
-    <NavWrapper>
+    <NavWrapper show={show}>
         <Logo>
             <img alt="logo" src='/images/apple-logo.png' onClick={()=>location.href='/'}>
             </img>
@@ -31,7 +50,7 @@ const NavWrapper = styled.nav`
     left: 0;
     right: 0;
     height: 70px;
-    background-color: #000;
+    background-color:${props => props.show === "true" ? "#000":"#000"};
     display: flex;
     justify-content: space-between; 
     align-items: center;
