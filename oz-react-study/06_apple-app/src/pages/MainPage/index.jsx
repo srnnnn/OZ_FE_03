@@ -3,13 +3,13 @@ import {styled} from 'styled-components'
 import Banner from '../../components/Banner'
 import Row from '../../components/Row'
 import requests from '../../api/requests'
-import Nav from '../../components/Nav'
+// import Nav from '../../components/Nav'
 
 
 const MainPage = () => {
   return (
     <Container>
-      <Nav/>
+      {/* <Nav/> */}
       <Banner/>
       <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending}/>
       <Row title="Top Rated" id="TR" fetchUrl={requests.fetchTopRated}/>
