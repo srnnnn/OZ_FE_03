@@ -97,5 +97,20 @@
     }
 }
 
-
+.swiper-pagination {
+    text-align: right !important;
+}
+.swiper-pagination-bullet {
+    background: rgba(85, 85, 85, 0.532) !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 0.722) !important;
+}
+.swiper-button-prev {
+    color: white !important;
+}
+.swiper-button-next {
+    color: white !important;
+}
  
