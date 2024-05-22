@@ -54,13 +54,10 @@ const DetailPage = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Wrap>
-        {movie.title}
-        </Wrap>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Wrap>
-          
-          
+          <Title>{movie.title}</Title>
+          <ReleaseDate>{movie.release_date}</ReleaseDate>
+          <Popularity>평점 : {movie.vote_average}</Popularity>
+          <Overview>{movie.overview}</Overview>
         </Wrap>
       </SwiperSlide>
       </Swiper>
@@ -100,5 +97,35 @@ img {
   transform: scale(0.98);
   border-color: rgba(249, 249, 249, 0.8);
 }
+`
+const Title = styled.h1`
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 10px;
+`
+
+const ReleaseDate = styled.p`
+  position: relative;
+  z-index: 2;
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 10px;
+`
+
+const Popularity = styled.p`
+  position: relative;
+  z-index: 2;
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 10px;
+`
+
+const Overview = styled.p`
+  position: relative;
+  z-index: 2;
+  color: #bbb;
+  font-size: 16px;
 `
 export default DetailPage
