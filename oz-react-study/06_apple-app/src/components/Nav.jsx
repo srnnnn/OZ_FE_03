@@ -31,8 +31,12 @@ const Nav = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        navigate('/');
-      } else if (user && pathname === "/") {
+        if(pathname === '/signup'){
+          navigate('/signup');
+        }else{
+          navigate('/');
+        }
+      } else if (user || pathname === "/") {
         navigate('/main');
       }
     })
@@ -80,16 +84,16 @@ const Nav = () => {
             onClick={()=>(window.location.href='/')}/>
         </Logo>
 
-        {pathname === '/'? (
+        {pathname === '/' || pathname === '/signup'? (
           <Login onClick={handleAuth}>로그인</Login>
         ) : (
           <Input type="text" placeholder="영화를 검색해주세요." className="nav__input" 
           value={searchValue} onChange={handleChange}/>
         )}
 
-        {pathname !== "/" ?
+        {(localStorage.getItem("userData") && pathname === "/" ) || (localStorage.getItem("userData") && pathname !== "/signup")?
         <SignOut>
-          <UserImg src={userData.photoURL} alt={userData.displayName} />
+          <UserImg src={userData.photoURL} alt={userData.displayName}  />
           <DropDown>
             <span onClick={handleLogOut}>
               Sign Out
