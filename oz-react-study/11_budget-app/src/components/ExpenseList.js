@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../contexts/AppContext'
 import ExpenseItem from '../components/ExpenseItem'
 
@@ -6,6 +6,11 @@ const ExpenseList = () => {
 
   const {expenses} = useContext (AppContext);  
   console.log(expenses);
+
+  useEffect(() => {
+    setFilterdExpenses(expenses);
+  }, [expenses])
+  
 
   const [filterdExpenses, setFilterdExpenses] = useState(expenses || []);
 
