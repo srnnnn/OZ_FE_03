@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css'
+import { decrement, increment } from './redux/action';
 
 function App() {
   const counter = useSelector((state) => state);
@@ -8,10 +9,10 @@ function App() {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    dispatch({type:'INCREMENT'})
+    dispatch(increment());
  }
   const handleDecrement = () => {
-    dispatch({type:'DECREMENT'}) 
+    dispatch(decrement());
  }
  const handleAsyncIncrement = () => {
   setTimeout(() => {
