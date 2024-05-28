@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-// import { increment, asyncIncrement } from './redux/action';
 import './App.css'
 
 function App() {
