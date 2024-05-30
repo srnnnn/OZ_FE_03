@@ -1,5 +1,5 @@
 {
-  "name": "15_react-testing-app",
+  "name": "15-2_react-button-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -28,9 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-plugin-jest-dom": "^5.4.0",
-    "eslint-plugin-testing-library": "^6.2.2"
   }
 }
