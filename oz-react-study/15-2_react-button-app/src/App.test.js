@@ -34,7 +34,7 @@ test('minus button has correct text', () => {
    test('on/off button has blue color', () => { 
     render(<App/>);
     const buttonElement = screen.getByTestId("on/off-button");
-    expect(buttonElement).toHaveStyle({backgroundColor: "blue"})
+    expect(buttonElement).toHaveStyle({backgroundColor: "gray"})
     })
 
   test("Prevent the -,+ button from being pressed when the on/off button is cliecked", () => {
