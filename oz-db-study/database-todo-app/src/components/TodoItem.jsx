@@ -19,7 +19,7 @@ const TodoItem = ({
     // console.log(todo);
     try {
       await axios.put(`http://localhost:8080/api/todos/${id}`, {
-        completed: completed ? true : false,
+        completed: completed,
         title: todo.title, //현재선택한투두
       });
       const resp = await axios.get("http://localhost:8080/api/todos");
@@ -44,7 +44,7 @@ const TodoItem = ({
       setTodos(resp.data);
       console.log(resp);
       //요 밑에 상태를 업데이트해줘야 리렌더링되서 ui 바뀜 안하면 디비 업데이트만 됨
-      setEditingTodo();
+      setEditingTodo(null); //null안해도 되긴 함
       //   setNewTitle("");
     } catch (error) {
       console.error("saveEdit: " + error);
