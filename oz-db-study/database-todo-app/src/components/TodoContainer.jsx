@@ -16,6 +16,8 @@ function TodoContainer({ theme, toggleTheme }) {
       // - axios를 사용하여 서버의 /api/todos 엔드포인트에서 데이터를 가져옵니다.
       // - 데이터를 성공적으로 가져오면 setTodos를 호출하여 상태를 업데이트합니다.
       // - 데이터를 가져오는 동안 또는 실패 시 오류를 콘솔에 기록합니다.
+
+      //새로 추가 함
       try {
         const resp = await axios.get("http://localhost:8080/api/todos");
         setTodos(resp.data);
