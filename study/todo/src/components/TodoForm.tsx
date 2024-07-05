@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useStore from "../store/useStore";
+import useStore from "../../config/useStore";
 
 export default function TodoForm() {
   const [newTitle, setNewTitle] = useState("");
