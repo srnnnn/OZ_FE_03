@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useStore from "../store/useStore";
+import useStore from "../../config/useStore";
 
 export default function TodoItem({ todo }) {
   const [newTitle, setNewTitle] = useState(todo.title);
@@ -58,13 +58,6 @@ export default function TodoItem({ todo }) {
             </div>
           )}
         </div>
-
-        {/* <button
-            className="todoItem-div__button-edit"
-            onClick={() => editTodo()}
-          >
-            수정
-          </button> */}
         <button
           className="todoItem-div__button-delete"
           onClick={() => removeTodo(todo.id)}
